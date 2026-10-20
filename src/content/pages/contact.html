@@ -20,10 +20,141 @@ eleventyComputed:
 
 {% block body %}
 
-    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
 
-    <!-- If you want the page to have a "CTA", remove the {# and #} below -->
-    {# {% include 'sections/cta.html' %} #}
+<main class="contact-page">
+
+  <!-- Contact heading and information -->
+  <section class="contact-intro">
+    <div class="contact-intro__heading">
+      <h1>Come by.<br>Say hello.</h1>
+    </div>
+
+    <div class="contact-intro__details">
+      <div class="contact-intro__info">
+        <span class="contact-eyebrow">HOURS OF OPERATION</span>
+        <p>
+          Monday – Friday: 10am – 6pm<br>
+          Saturday: 10am – 5pm<br>
+          Sunday: Closed
+        </p>
+      </div>
+
+      <div class="contact-intro__info">
+        <span class="contact-eyebrow">GIVE US A CALL</span>
+        <p>
+          <a href="tel:+18456882161">(845) 688-2161</a>
+        </p>
+      </div>
+
+      <div class="contact-intro__info">
+        <span class="contact-eyebrow">VISIT US</span>
+        <p>
+          7053 NY-28<br>
+          Shandaken, NY 12480
+        </p>
+      </div>
+
+      <div class="contact-intro__info">
+        <span class="contact-eyebrow">SEND US A NOTE</span>
+        <p>
+          <a href="mailto:Fayestormsrealtor@gmail.com">Fayestormsrealtor@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Images and contact form -->
+  <section class="contact-main">
+
+    <div class="contact-gallery">
+      <div class="contact-gallery__main">
+        <img
+          src="/assets/images/Shop1.jpg"
+          alt="Explore our collection"
+        >
+      </div>
+
+      <div class="contact-gallery__overlap">
+        <img
+          src="/assets/images/BlueSign.jpg"
+          alt="A detail from our space"
+        >
+      </div>
+    </div>
+
+    <div class="contact-form-card">
+      <form
+        class="contact-form"
+        id="contact-form"
+        name="Contact Form"
+        method="post"
+        action=""
+      >
+        <span class="contact-eyebrow">SEND A NOTE</span>
+
+        <label class="contact-form__field">
+          <span class="contact-form__label">YOUR NAME</span>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            autocomplete="name"
+            required
+          >
+        </label>
+
+        <label class="contact-form__field">
+          <span class="contact-form__label">EMAIL ADDRESS</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            autocomplete="email"
+            required
+          >
+        </label>
+
+        <label class="contact-form__field contact-form__message">
+          <span class="contact-form__label">WHAT'S ON YOUR MIND?</span>
+          <textarea
+            name="message"
+            placeholder="Tell us a little more..."
+            rows="4"
+            required
+          ></textarea>
+        </label>
+
+        <div class="contact-form__actions">
+          <button type="submit" class="contact-submit">
+            SEND YOUR NOTE <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- Rectangular map -->
+  <section class="contact-map-section">
+    <div class="contact-map-heading">
+      <span class="contact-eyebrow"></span>
+    </div>
+
+    <div class="contact-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6247292.373518587!2d-90.0217184821363!3d40.13257683678109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dc57f25c11a3e1%3A0xc2c09af162765370!2sBlue%20Barn%20Marketplace!5e0!3m2!1sen!2sus!4v1792540619213!5m2!1sen!2sus"
+        title="Map showing our location"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+</main>
 
 {% endblock %}
 
