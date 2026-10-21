@@ -1093,229 +1093,128 @@ color: var(--bodyTextColor);
 <---          Footer            -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
-@media only screen and (min-width: 0px) {
-	#cs-footer-275 {
-		padding: var(--sectionPadding);
-		background-color: #1a1a1a;
+@footer-bg: #8F9B7F;
+@footer-text: #1f2a1a;
+@footer-cream: #F4F1E8;
+@footer-font: Georgia, "Times New Roman", serif;
 
-		.cs-container {
-			width: 100%;
-			/* reset on tablet */
-			max-width: (550/16rem);
-			margin: auto;
-			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
-			flex-wrap: wrap;
-			column-gap: (88/16rem);
-			row-gap: (32/16rem);
-		}
+#simple-footer {
+    background-color: @footer-bg;
+    color: @footer-text;
+    font-family: @footer-font;
+    padding: 2rem 1.5rem 1.5rem;
 
-		.cs-logo-group {
-			/* takes up all the space, lets the other ul's wrap below it */
-			width: 100%;
-			position: relative;
-		}
+    .sf-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
 
-		.cs-logo {
-			/* 210px - 240px */
-			width: clamp(13.125rem, 8vw, 15rem);
-			height: auto;
-			display: block;
-			/* 28px - 44px */
-			margin-bottom: clamp(1.75rem, 4.17vw, 2.75rem);
-		}
+    /* Top row */
+    .sf-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+    }
 
-		.cs-logo-img {
-			width: 100%;
-			height: auto;
-		}
+    .sf-logo-img {
+        display: block;
+        width: 11rem;
+        height: auto;
+        margin: 0 auto 0.25rem;
+    }
 
-		.cs-text {
-			color: var(--bodyTextColorWhite);
-			margin-bottom: (16/16rem);
-		}
+    .sf-slogan {
+        margin: 0;
+        font-size: 0.9rem;
+        font-style: italic;
+        letter-spacing: 0.04em;
+    }
 
-		.cs-social {
-			display: inline-flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			gap: (12/16rem);
-			position: absolute;
-			top: 0;
-			right: 0;
-		}
+    .sf-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 2rem;
+    }
 
-		.cs-social-link {
-			width: (24/16rem);
-			height: (24/16rem);
-			background-color: #4e4b66;
-			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: relative;
-			z-index: 1;
-			transition: transform 0.3s, background-color 0.3s;
+    .sf-link {
+        color: @footer-text;
+        font-size: 1rem;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+        padding-bottom: 0.15rem;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.3s;
 
-			&:hover {
-				background-color: #1a1a1a;
-				transform: translateY(-0.1875rem);
-			}
-		}
+        &:hover {
+            border-bottom-color: @footer-text;
+        }
+    }
 
-		.cs-social-img {
-			height: (13/16rem);
-			width: auto;
-			display: block;
-		}
+    .sf-button {
+        display: inline-block;
+        background-color: @footer-cream;
+        color: @footer-text;
+        border: 1px solid @footer-cream;
+        font-size: 0.95rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0.75rem 1.75rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s, border-color 0.3s;
 
-		/* Navigation Links */
-		.cs-nav {
-			padding: 0;
-			margin: 0;
-		}
+        &:hover {
+            background-color: transparent;
+            border-color: @footer-text;
+        }
+    }
 
-		.cs-nav-li {
-			list-style: none;
-			margin-bottom: (16/16rem);
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-		}
+    /* Bottom row */
+    .sf-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem;
+        margin-top: 1.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid fade(@footer-text, 25%);
+        text-align: center;
+    }
 
-		.cs-header {
-			font-size: (16/16rem);
-			line-height: 1.5em;
-			font-weight: 700;
-			color: var(--bodyTextColorWhite);
-			position: relative;
+    .sf-meta {
+        margin: 0;
+        font-size: 0.85rem;
+        letter-spacing: 0.03em;
+        color: @footer-text;
+        text-decoration: none;
+    }
 
-			&:after {
-				content: "";
-				width: (32/16rem);
-				height: (4/16rem);
-				margin: (16/16rem) auto (24/16rem) 0;
-				background: var(--primary);
-				opacity: 1;
-				position: relative;
-				display: block;
-			}
-		}
+    .sf-address:hover {
+        text-decoration: underline;
+    }
 
-		.cs-nav-link {
-			font-size: (16/16rem);
-			text-decoration: none;
-			line-height: 1.5em;
-			color: var(--bodyTextColorWhite);
-			position: relative;
+    /* Desktop */
+    @media only screen and (min-width: 48rem) {
+        .sf-top {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+        }
 
-			&:before {
-				/* underline */
-				content: "";
-				width: 0%;
-				height: (2/16rem);
-				background: var(--bodyTextColorWhite);
-				opacity: 1;
-				position: absolute;
-				display: block;
-				bottom: (-2/16rem);
-				left: 0;
-				transition: width 0.3s;
-			}
+        .sf-logo-img {
+            margin-left: 0;
+        }
 
-			&:hover {
-				&:before {
-					width: 100%;
-				}
-			}
-		}
-
-		/* Contact Links */
-		.cs-contact {
-			margin: 0;
-			padding: 0;
-			width: 35%;
-		}
-
-		.cs-contact-li {
-			list-style: none;
-			margin-bottom: (0/16rem);
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-		}
-
-		.cs-contact-link {
-			font-size: (16/16rem);
-			text-decoration: none;
-			line-height: 1.5em;
-			text-align: left;
-			color: var(--bodyTextColorWhite);
-			display: inline-block;
-
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-
-		.cs-address {
-			font-size: (16/16rem);
-			margin-bottom: (20/16rem);
-		}
-	}
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-	#cs-footer-275 {
-		.cs-container {
-			max-width: (1280/16rem);
-			row-gap: 0;
-		}
-
-		.cs-contact {
-			flex-direction: row;
-			justify-content: space-between;
-			border-top: none;
-		}
-
-		.cs-contact-li {
-			margin: 0;
-		}
-	}
-}
-
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-	#cs-footer-275 {
-		.cs-container {
-			/* pushes all flex children to the top */
-			align-items: flex-start;
-			justify-content: flex-end;
-		}
-
-		.cs-logo-group {
-			/* pushes everything to the right of it as far as possible in a flexbox */
-			margin-right: auto;
-			width: auto;
-			max-width: (305/16rem);
-		}
-
-		.cs-text {
-			width: 100%;
-		}
-
-		.cs-social {
-			flex-direction: row;
-			position: relative;
-			top: auto;
-			right: auto;
-		}
-
-		.cs-contact {
-			width: auto;
-		}
-	}
+        .sf-bottom {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 }
