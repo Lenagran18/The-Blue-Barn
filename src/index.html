@@ -28,21 +28,52 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 {% endblock %}
 
 {% block body %}
-    <section id="welcome">
-        <div class="cs-container">
-            <div class="cs-content">
-                <h1>Welcome to Your New Website</h1>
-                <p>
-                    This template has been stripped to its bare minimum. All demo content
-                    has been moved to <code>scripts/deleted/</code> and can be safely deleted
-                    once you no longer need it.
-                </p>
-                <p>
-                    Get started by reading the
-                    Quick Start Guide
-                    section in the README.
-                </p>
-            </div>
-        </div>
-    </section>
+<section id="welcome" class="hero">
+    <div class="hero__image"></div>
+
+    <div class="hero__content">
+        <span class="hero__eyebrow">
+            ANTIQUES, VINTAGE &amp; CURIOUS FINDS
+        </span>
+
+        <h1>Recycling <br>since 1979</h1>
+
+        <p>
+           lorem ipsum dolor sit amet consectetur 
+           adipiscing elit id in sint dolorem molestias 
+           expedita id placeat praesentium deserunt id.
+        </p>
+
+        <a href="/visit/" class="hero__button">
+            <span>Plan your visit</span>
+            <span aria-hidden="true">→</span>
+        </a>
+    </div>
+</section>
+
+<section class="hero-intro">
+    <div class="hero-intro__heading">
+        <span class="hero-intro__eyebrow">
+            NOT YOUR AVERAGE ANTIQUE STORE
+        </span>
+
+        <h2>Collected, not<br>over-curated.</h2>
+    </div>
+
+    <div class="hero-intro__description">
+        <p class="hero-intro__lead">
+            We like old things with good bones, a little wit,
+            and stories still left to tell.
+        </p>
+
+        <p class="hero-intro__text">
+            Wander through two warm, wood-lined buildings where every
+            corner belongs to someone with a particular eye. Fine
+            antiques mingle with vintage clothes, odd paintings,
+            found objects, mid-century shapes, and useful things
+            worth using again.
+        </p>
+    </div>
+</section>
+
 {% endblock %}
