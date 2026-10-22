@@ -354,3 +354,176 @@
         margin-bottom: 22px;
     }
 }
+
+
+/* =========================================
+   BLUE BARN HISTORY
+========================================= */
+
+.barn-history {
+    position: relative;
+    width: 100%;
+    background: #faf8f1;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+}
+
+/* Teal background, ending above image bottom */
+.barn-history::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 40px);
+    background: #193b3e;
+    z-index: 0;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.barn-history__container {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 58% 1fr;
+    align-items: center;
+    gap: 8%;
+
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 38px 4% 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   LEFT IMAGE
+========================================= */
+
+.barn-history__image {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.barn-history__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.barn-history__content {
+    max-width: 520px;
+    padding: 20px 0 55px;
+    color: #f1eadb;
+}
+
+.barn-history__eyebrow {
+    display: block;
+    margin-bottom: 22px;
+
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #f1eadb;
+}
+
+.barn-history__content h2 {
+    margin: 0 0 26px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 3.7vw, 62px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+    font-weight: 400;
+    color: #f1eadb;
+}
+
+.barn-history__content p {
+    margin: 0 0 10px;
+    font-size: 11px;
+    line-height: 1.75;
+    font-weight: 400;
+    color: #f1eadb;
+}
+
+.barn-history__content p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .barn-history__container {
+        grid-template-columns: 55% 1fr;
+        gap: 5%;
+        padding: 35px 4% 0;
+    }
+
+    .barn-history__image {
+        height: 420px;
+    }
+
+    .barn-history__content h2 {
+        font-size: clamp(36px, 4vw, 50px);
+    }
+
+    .barn-history__content p {
+        font-size: 10px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .barn-history::before {
+        height: calc(100% - 30px);
+    }
+
+    .barn-history__container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 40px 6% 0;
+    }
+
+    .barn-history__image {
+        height: 300px;
+        order: 2;
+    }
+
+    .barn-history__content {
+        order: 1;
+        max-width: none;
+        padding: 0;
+    }
+
+    .barn-history__content h2 {
+        font-size: clamp(40px, 10vw, 54px);
+        letter-spacing: -1.5px;
+    }
+
+    .barn-history__content p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+}
