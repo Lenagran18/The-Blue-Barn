@@ -19,11 +19,57 @@ eleventyComputed:
 {% endblock %}
 
 {% block body %}
+<!-- =========================================
+     ABOUT HERO
+========================================= -->
 
-    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+<section id="about-hero" class="about-hero">
 
-    <!-- If you want the page to have a "CTA", remove the {# and #} below -->
-    {# {% include 'sections/cta.html' %} #}
+    <div class="about-hero__container">
+
+        <!-- Top Editorial Content -->
+        <div class="about-hero__intro">
+
+            <div class="about-hero__heading">
+                <span class="about-hero__eyebrow">
+                    WOMAN-OWNED &amp; LOCALLY ROOTED
+                </span>
+
+                <h1>
+                    The woman behind<br>
+                    The Blue Barn.
+                </h1>
+            </div>
+
+            <div class="about-hero__description">
+                <p class="about-hero__lead">
+                    What began as an antique store in the 1990s 
+                    has grown into a collection of antique dealers, 
+                    vintage finds, and local art.
+                </p>
+
+                <p class="about-hero__text">
+                    The Blue Barn is a woman-owned business founded
+                    by Faye Storms, whose background in fashion,
+                    design, and antiques has shaped the property
+                    into what it is today.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Large Image -->
+        <div class="about-hero__image">
+            <img
+                src="/assets/images/BlueBarnExterior.jpg"
+                alt="Antique furniture and vintage decor inside The Blue Barn"
+                loading="eager"
+            >
+        </div>
+
+    </div>
+
+</section>
 
 {% endblock %}
 

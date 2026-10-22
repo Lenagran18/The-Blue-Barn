@@ -1,0 +1,190 @@
+/* =========================================
+   ABOUT HERO SECTION
+========================================= */
+
+.about-hero {
+    position: relative;
+    width: 100%;
+    background: #f1eadb;
+    padding: 170px 0 80px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.about-hero__container {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+}
+
+/* =========================================
+   EDITORIAL INTRO
+========================================= */
+
+.about-hero__intro {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: end;
+    gap: 8%;
+
+    padding: 0 6% 65px;
+}
+
+/* Heading */
+.about-hero__heading {
+    max-width: 750px;
+}
+
+.about-hero__eyebrow {
+    display: block;
+    margin: 0 0 25px 15px;
+
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #24221d;
+}
+
+.about-hero__heading h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(55px, 5.5vw, 90px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -3.5px;
+
+    color: #24221d;
+}
+
+/* =========================================
+   RIGHT SIDE DESCRIPTION
+========================================= */
+
+.about-hero__description {
+    max-width: 480px;
+    border-left: 1px solid #24221d;
+    padding: 20px 0 5px 24px;
+    margin-bottom: 5px;
+}
+
+.about-hero__lead {
+    margin: 0 0 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(17px, 1.4vw, 22px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: #24221d;
+}
+
+.about-hero__text {
+    margin: 0;
+
+    font-size: 10px;
+    line-height: 1.7;
+    color: #24221d;
+}
+
+/* =========================================
+   LARGE IMAGE
+========================================= */
+
+.about-hero__image {
+    position: relative;
+    width: 88%;
+    height: 520px;
+    margin-left: 12%;
+    overflow: hidden;
+}
+
+.about-hero__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .about-hero {
+        padding: 90px 0 60px;
+    }
+
+    .about-hero__intro {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 5%;
+        padding: 0 5% 50px;
+    }
+
+    .about-hero__heading h1 {
+        font-size: clamp(48px, 6vw, 70px);
+        letter-spacing: -2px;
+    }
+
+    .about-hero__description {
+        padding-left: 18px;
+    }
+
+    .about-hero__image {
+        width: 92%;
+        height: 420px;
+        margin-left: 8%;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .about-hero {
+        padding: 80px 0 45px;
+    }
+
+    .about-hero__intro {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 0 7% 40px;
+    }
+
+    .about-hero__eyebrow {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-hero__heading h1 {
+        font-size: clamp(46px, 11vw, 65px);
+        line-height: 1;
+        letter-spacing: -2px;
+    }
+
+    .about-hero__description {
+        max-width: 100%;
+        padding: 5px 0 5px 18px;
+        margin: 0;
+    }
+
+    .about-hero__lead {
+        font-size: 19px;
+    }
+
+    .about-hero__text {
+        font-size: 11px;
+    }
+
+    .about-hero__image {
+        width: 94%;
+        height: 320px;
+        margin-left: 6%;
+    }
+}
