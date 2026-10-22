@@ -296,3 +296,213 @@
         font-size: 8px;
     }
 }
+
+
+
+/* =========================================
+   AROUND THE GALLERY
+========================================= */
+
+.gallery-photos {
+    position: relative;
+    width: 100%;
+    background: #faf8f1;
+    padding: 110px 7% 120px;
+    box-sizing: border-box;
+}
+
+.gallery-photos__container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.gallery-photos__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 75px;
+}
+
+.gallery-photos__eyebrow {
+    display: block;
+
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #24221d;
+}
+
+.gallery-photos__header h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 4vw, 65px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    color: #24221d;
+}
+
+/* =========================================
+   IMAGE GRID
+========================================= */
+
+.gallery-photos__grid {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 5%;
+    align-items: start;
+}
+
+/* =========================================
+   IMAGE STYLING
+========================================= */
+
+.gallery-photos__item {
+    margin: 0;
+    min-width: 0;
+}
+
+.gallery-photos__image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery-photos__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================================
+   LARGE LEFT IMAGE
+========================================= */
+
+.gallery-photos__item--main .gallery-photos__image {
+    height: 480px;
+}
+
+/* =========================================
+   RIGHT COLUMN
+========================================= */
+
+.gallery-photos__right {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    padding-top: 70px;
+}
+
+.gallery-photos__item--secondary .gallery-photos__image {
+    height: 220px;
+}
+
+/* =========================================
+   IMAGE CAPTIONS
+========================================= */
+
+.gallery-photos__item figcaption {
+    margin-top: 8px;
+    padding-top: 10px;
+
+    border-top: 1px solid rgba(36, 34, 29, 0.25);
+
+    font-size: 7px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #24221d;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .gallery-photos {
+        padding: 85px 5% 100px;
+    }
+
+    .gallery-photos__header {
+        margin-bottom: 55px;
+    }
+
+    .gallery-photos__header h2 {
+        font-size: clamp(38px, 5vw, 52px);
+    }
+
+    .gallery-photos__grid {
+        grid-template-columns: 1.3fr 1fr;
+        gap: 4%;
+    }
+
+    .gallery-photos__item--main .gallery-photos__image {
+        height: 420px;
+    }
+
+    .gallery-photos__right {
+        padding-top: 45px;
+        gap: 45px;
+    }
+
+    .gallery-photos__item--secondary .gallery-photos__image {
+        height: 190px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .gallery-photos {
+        padding: 65px 6% 80px;
+    }
+
+    .gallery-photos__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .gallery-photos__header h2 {
+        font-size: clamp(40px, 10vw, 54px);
+        letter-spacing: -1.5px;
+    }
+
+    .gallery-photos__grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .gallery-photos__item--main .gallery-photos__image {
+        height: 330px;
+    }
+
+    .gallery-photos__right {
+        padding-top: 0;
+        gap: 45px;
+    }
+
+    .gallery-photos__item--secondary .gallery-photos__image {
+        height: 260px;
+    }
+
+    .gallery-photos__item figcaption {
+        font-size: 8px;
+    }
+}
