@@ -20,10 +20,92 @@ eleventyComputed:
 
 {% block body %}
 
-    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+ 
+<!-- =========================================
+     GALLERY 28 HERO
+========================================= -->
 
-    <!-- If you want the page to have a "CTA", remove the {# and #} below -->
-    {# {% include 'sections/cta.html' %} #}
+<section id="gallery-hero" class="gallery-hero">
+    <div class="gallery-hero__container">
+        <div class="gallery-hero__heading">
+            <span class="gallery-hero__eyebrow">
+                THE BLUE BARN PRESENTS
+            </span>
+
+            <h1>
+                Gallery <span>28</span>
+            </h1>
+
+        </div>
+
+        <div class="gallery-hero__description">
+            <p>
+                A COMMUNITY Art Gallery featuring local and regional artists with
+                an opening almost every month.    
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================
+     ABOUT THE GALLERY
+========================================= -->
+
+<section id="gallery-about" class="gallery-about">
+    <div class="gallery-about__container">
+        <!-- Left Heading -->
+        <div class="gallery-about__heading">
+            <span class="gallery-about__eyebrow">
+                ABOUT THE GALLERY
+            </span>
+
+            <h2>
+                Lorem Ipsum,<br>
+                Dolor amet.
+            </h2>
+        </div>
+
+        <!-- Right Content -->
+        <div class="gallery-about__content">
+
+            <p class="gallery-about__lead">
+                Gallery 28 is a community art gallery inside
+                The Blue Barn, created to give local and
+                regional artists a place to show their work.
+            </p>
+
+            <p class="gallery-about__text">
+                Lorem ipsum dolor sit amet consectetur adipiscing 
+                elit. Et qui cumque duis minus harum eiusmod. Voluptatum 
+                deserunt occaecat esse quo officia nihil provident culpa 
+                quos. Omnis quibusdam soluta distinctio anim placeat 
+                iusto ex mollitia animi sint quo velit. Deserunt anim 
+                nulla officia consequat quas et placeat.
+            </p>
+
+            <p class="gallery-about__text">
+                Lorem ipsum dolor sit amet consectetur adipiscing 
+                elit. Et qui cumque duis minus harum eiusmod. Voluptatum 
+                deserunt occaecat esse quo officia nihil provident culpa 
+                quos. 
+            </p>
+
+            <!-- Bottom Information -->
+            <div class="gallery-about__details">
+
+                <span>INFO</span>
+
+                <span>INFO</span>
+
+                <span>INFO</span>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
 
 {% endblock %}
 

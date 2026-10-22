@@ -1,0 +1,298 @@
+
+/* =========================================
+   GALLERY 28 HERO
+========================================= */
+
+.gallery-hero {
+    position: relative;
+    width: 100%;
+    background: #faf8f1;
+    padding: 110px 7% 65px;
+    box-sizing: border-box;
+}
+
+.gallery-hero__container {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    align-items: end;
+    gap: 8%;
+
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Eyebrow */
+.gallery-hero__eyebrow {
+    display: block;
+    margin-bottom: 25px;
+
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #24221d;
+}
+
+/* Large Gallery Heading */
+.gallery-hero__heading h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(85px, 9vw, 155px);
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -6px;
+
+    color: #24221d;
+    white-space: nowrap;
+}
+
+/* Orange 28 */
+.gallery-hero__heading h1 span {
+    color: #c98b46;
+}
+
+/* Right Description */
+.gallery-hero__description {
+    max-width: 290px;
+    justify-self: end;
+    padding-bottom: 20px;
+}
+
+.gallery-hero__description p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.75;
+    color: #24221d;
+}
+
+
+/* =========================================
+   ABOUT THE GALLERY
+========================================= */
+
+.gallery-about {
+    position: relative;
+    width: 100%;
+    background: #193b3e;
+    padding: 85px 7% 95px;
+    box-sizing: border-box;
+}
+
+.gallery-about__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+    align-items: start;
+
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   LEFT HEADING
+========================================= */
+
+.gallery-about__heading {
+    max-width: 600px;
+}
+
+.gallery-about__eyebrow {
+    display: block;
+    margin-bottom: 25px;
+
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #f1eadb;
+}
+
+.gallery-about__heading h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 4.5vw, 72px);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -2px;
+
+    color: #f1eadb;
+}
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.gallery-about__content {
+    width: 100%;
+    padding-top: 5px;
+}
+
+.gallery-about__lead {
+    max-width: 500px;
+    margin: 0 0 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(19px, 1.5vw, 24px);
+    font-weight: 400;
+    line-height: 1.35;
+
+    color: #f1eadb;
+}
+
+.gallery-about__text {
+    max-width: 490px;
+    margin: 0 0 10px;
+
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #f1eadb;
+}
+
+/* =========================================
+   BOTTOM INFORMATION ROW
+========================================= */
+
+.gallery-about__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(241, 234, 219, 0.35);
+}
+
+.gallery-about__details span {
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #f1eadb;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .gallery-hero {
+        padding: 100px 5% 60px;
+    }
+
+    .gallery-hero__container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .gallery-hero__heading h1 {
+        font-size: clamp(75px, 11vw, 120px);
+        letter-spacing: -4px;
+    }
+
+    .gallery-hero__description {
+        justify-self: start;
+        padding-bottom: 0;
+    }
+
+    .gallery-about {
+        padding: 75px 5%;
+    }
+
+    .gallery-about__container {
+        gap: 6%;
+    }
+
+    .gallery-about__heading h2 {
+        font-size: clamp(42px, 5vw, 60px);
+    }
+
+    .gallery-about__details {
+        gap: 15px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .gallery-hero {
+        padding: 100px 6% 55px;
+    }
+
+    .gallery-hero__container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .gallery-hero__eyebrow {
+        margin-bottom: 20px;
+    }
+
+    .gallery-hero__heading h1 {
+        font-size: clamp(55px, 12vw, 85px);
+        letter-spacing: -3px;
+        line-height: 1;
+        white-space: normal;
+    }
+
+    .gallery-hero__description {
+        max-width: 300px;
+    }
+
+    .gallery-hero__description p {
+        font-size: 12px;
+    }
+
+    .gallery-about {
+        padding: 65px 6% 75px;
+    }
+
+    .gallery-about__container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .gallery-about__eyebrow {
+        margin-bottom: 20px;
+    }
+
+    .gallery-about__heading h2 {
+        font-size: clamp(45px, 11vw, 60px);
+        letter-spacing: -1.5px;
+    }
+
+    .gallery-about__lead {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .gallery-about__text {
+        font-size: 12px;
+    }
+
+    .gallery-about__details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-top: 35px;
+    }
+
+    .gallery-about__details span {
+        font-size: 8px;
+    }
+}
