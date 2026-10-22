@@ -188,3 +188,169 @@
         margin-left: 6%;
     }
 }
+
+
+/* =========================================
+   FAYE'S STORY
+========================================= */
+
+.faye-story {
+    position: relative;
+    width: 100%;
+    background: #faf8f1;
+    padding: 110px 7% 120px;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   TWO COLUMN LAYOUT
+========================================= */
+
+.faye-story__container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 10%;
+
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    align-items: start;
+}
+
+/* =========================================
+   LEFT HEADING
+========================================= */
+
+.faye-story__heading {
+    position: relative;
+    max-width: 650px;
+}
+
+.faye-story__eyebrow {
+    display: block;
+    margin-bottom: 22px;
+
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    color: #24221d;
+}
+
+.faye-story__heading h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 3.6vw, 62px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+    font-weight: 400;
+
+    color: #24221d;
+}
+
+/* =========================================
+   RIGHT STORY CONTENT
+========================================= */
+
+.faye-story__content {
+    width: 100%;
+    max-width: 480px;
+    justify-self: start;
+}
+
+/* Larger introductory paragraph */
+.faye-story__lead {
+    margin: 0 0 28px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(19px, 1.45vw, 24px);
+    line-height: 1.35;
+    font-weight: 400;
+
+    color: #24221d;
+}
+
+/* Remaining paragraphs */
+.faye-story__content p:not(.faye-story__lead) {
+    margin: 0 0 26px;
+
+    font-size: 11px;
+    line-height: 1.85;
+    font-weight: 400;
+
+    color: #24221d;
+}
+
+.faye-story__content p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .faye-story {
+        padding: 85px 5%;
+    }
+
+    .faye-story__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 6%;
+    }
+
+    .faye-story__heading h2 {
+        font-size: clamp(38px, 4.5vw, 52px);
+    }
+
+    .faye-story__lead {
+        font-size: 19px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .faye-story {
+        padding: 65px 7% 75px;
+    }
+
+    .faye-story__container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .faye-story__eyebrow {
+        margin-bottom: 18px;
+    }
+
+    .faye-story__heading h2 {
+        font-size: clamp(40px, 10vw, 54px);
+        line-height: 1.05;
+        letter-spacing: -1.5px;
+    }
+
+    .faye-story__content {
+        max-width: none;
+    }
+
+    .faye-story__lead {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 24px;
+    }
+
+    .faye-story__content p:not(.faye-story__lead) {
+        font-size: 12px;
+        line-height: 1.85;
+        margin-bottom: 22px;
+    }
+}
